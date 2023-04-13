@@ -13,8 +13,14 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="container">
+    <ion-button id="inline">Inline</ion-button>
+    <ion-button (click)="useController($event)">Controller</ion-button>
   </div>
+
+  <ion-popover trigger="inline">
+    <ng-template>
+      <app-popover></app-popover>
+    </ng-template>
+  </ion-popover>
 </ion-content>
